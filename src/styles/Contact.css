@@ -1,0 +1,86 @@
+.contact-container{
+    margin-top: 8rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
+.form-and-send-button{
+    display: flex;
+    flex-direction: column;
+    width: 45rem;
+}
+
+.form-container{
+    background-color: var(--dark-blue);
+    border-radius: 0.5rem;
+    margin-left: 1.5rem;
+    padding:2rem;
+}
+
+.input-box, .text-area{
+    background-color: var(--white);
+    border-radius: 2.5rem;
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+}
+
+.input-box > input, textarea{
+    border: none;
+    background-color: transparent;
+    padding-left: 1.25rem;
+    width: 100%;
+}
+
+::placeholder {
+    color: var(--dark-blue);
+    font-size: var(--fs-md);
+    font-family: var(--ff-body);
+}
+
+.input-box > input:focus, textarea:focus{
+    outline: none;
+}
+
+.full-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom:  1rem;
+}
+
+.name{
+    width: 25%;
+}
+
+.email{
+    width: 72.5%;
+}
+
+.subject{
+    margin: 1rem 0;
+}
+
+.text-area{
+    border-radius: 1rem;
+    min-height: 8rem;
+}
+
+textarea{
+    margin-top: 1rem;
+    resize: none;
+}
+
+.send{
+    margin-top: 2.5rem;
+    align-self: flex-end;
+}
+
+.send > a{
+    color: var(--white);
+}

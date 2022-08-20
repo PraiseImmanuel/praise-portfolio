@@ -1,0 +1,29 @@
+.about-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-box-and-image{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-box{
+    background-color: var(--dark-blue);
+    border-radius: 0.5rem;
+    color: var(--white);
+    margin: 2rem 0;
+    max-width: 35rem;
+    padding: 2rem;
+}
+
+.about-box > p{
+    font-size: var(--fs-l);
+    margin: 1rem;
+    text-align: justify;
+}
+
+.about-img img{
+    max-width: 35rem;
+}

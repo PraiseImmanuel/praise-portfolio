@@ -1,0 +1,113 @@
+.header{
+    background-color: var(--dark-blue);
+    backdrop-filter: blur(10px);
+    display: flex;
+    height: 4.375rem;
+    justify-content: space-between;
+    padding: 0 5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 111;
+}
+
+.nav{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-links{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.nav-links > ul{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.nav-link{
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link > a{
+    color: var(--white);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.nav-link > a.active{
+    color: var(--light-blue);
+}
+
+.nav-link.two{
+    animation: animateUpwards 0.5s cubic-bezier(0.65, 0.05, 0.38, 0.94) 0.1s;
+}
+
+.nav-link.three{
+    animation: animateUpwards 0.5s cubic-bezier(0.65, 0.05, 0.38, 0.94) 0.2s;
+}
+
+.nav-link.four{
+    animation: animateUpwards 0.5s cubic-bezier(0.65, 0.05, 0.38, 0.94) 0.3s;
+}
+
+.nav-link.five{
+    animation: animateUpwards 0.5s cubic-bezier(0.65, 0.05, 0.38, 0.94) 0.4s;
+}
+
+.nav-link > a:hover{
+    color: var(--light-blue);
+}
+
+.displayed, .displayed-on-hover{
+    display: block;
+    padding: 0.5rem 0;
+    -webkit-transition: transform .7s cubic-bezier(.165,.85,.45,1);
+    transition: transform .7s cubic-bezier(.165,.85,.45,1);
+}
+
+.displayed{
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -o-transform: translateY(0%);
+}
+
+.displayed-on-hover{
+    position: absolute;
+    top: 0;
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -o-transform: translateY(100%);
+}
+
+.nav-link:hover .displayed{
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+}
+
+.nav-link:hover .displayed-on-hover{
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -o-transform: translateY(0%);
+}

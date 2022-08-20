@@ -1,0 +1,57 @@
+#animated-intro{
+    background-color: var(--dark-blue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10rem;
+    font-weight: 700;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    width: 100vw;
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 1s cubic-bezier(0.25, 0.74, 0.64, 0.55);
+}
+
+.up{
+    opacity:0;
+    animation: move-up 2s cubic-bezier(0.25, 0.74, 0.64, 0.55) 2;
+    animation-delay: 2s;
+}
+
+.down{
+    opacity: 0;
+    animation: move-down 2s cubic-bezier(0.25, 0.74, 0.64, 0.55) 2;
+    animation-delay: 2s;
+}
+.center{
+    color: var(--light-blue);
+    animation: center 4s 2;
+}
+
+@keyframes move-up{
+    0%   { opacity: 0.5; transform: translateY(100%);}
+    100% {opacity: 0; transform: translateY(-100%);}
+}
+
+@keyframes move-down{
+    0%   { opacity: 0.5; transform: translateY(-100%);}
+    100% {opacity: 0; transform: translateY(100%);}
+} 
+
+@keyframes center{
+    0%, 20%, 50%{transform: translateY(0); color: white;} 
+    40% {transform: translateY(-30px); color:white;} 
+    60% {transform: translateY(-15px); color: white;}
+    80%, 100% {transform: translateY(0); color: var(--light-blue);}     
+}
+
