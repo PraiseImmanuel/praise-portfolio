@@ -5,7 +5,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     letter-spacing: 0.05rem;
     padding: 4rem 0;
 }
@@ -28,3 +27,34 @@
     width: 1.5rem;
 }
 
+.footer-links svg:hover{
+    color: var(--grayish-pink);
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container{
+        font-size: var(--fs-sl);
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer-container{
+        font-size: var(--fs-xsl);
+    }
+
+    .footer-links li{
+        padding: 0 0.875rem;
+    }
+
+    .footer-links svg{
+        height: 1rem;
+        width: 1rem;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .footer-container{
+        padding: 3rem 0;
+    }
+}

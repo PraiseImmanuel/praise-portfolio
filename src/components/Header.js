@@ -1,4 +1,16 @@
 import React from "react";
+import { Link } from "react-scroll";
+import { animateScroll as scroll } from 'react-scroll';
+
+const hamburger = () =>{
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('display');
+    const displayedIcon = document.querySelector('.hamburger img');
+    document.querySelector('.nav-links').classList.contains('display') ? 
+        displayedIcon.setAttribute('src', './image/icon-close.svg') :  
+        displayedIcon.setAttribute('src', './image/icon-hamburger.svg');
+
+}
 
 const Header = () => {
     return(
@@ -14,34 +26,40 @@ const Header = () => {
                 <div className="nav-links">
                     <ul>
                         <li className="nav-link two">
-                            <a href="/" className="active">
+                             <Link activeClass="active" to="home" onClick={() => scroll.scrollToTop()} >
                                 <span className="displayed">Home</span>
                                 <span className="displayed-on-hover">Home</span>
-                            </a>
+                            </Link>
                         </li>
 
                         <li className="nav-link three">
-                            <a href="/">
-                            <span className="displayed">About</span>
-                            <span className="displayed-on-hover">About</span>
-                            </a>
+                            <Link activeClass="active" to="about" spy={true} smooth={true} offset={50} duration={500} >
+                                <span className="displayed">About</span>
+                                <span className="displayed-on-hover">About</span>
+                            </Link>
                         </li>
 
                         <li className="nav-link four">
-                            <a href="/">
+                            <Link activeClass="active" to="projects" spy={true} smooth={true} offset={50} duration={500}>
                                 <span className="displayed">Projects</span>
                                 <span className="displayed-on-hover">Projects</span>
-                            </a>
+                            </Link>
                         </li>
 
                         <li className="nav-link five">
-                            <a href="/">
+                            <Link activeClass="active" to="contact" spy={true} smooth={true} offset={50} duration={500}>
                                 <span className="displayed">Contact</span>
                                 <span className="displayed-on-hover">Contact</span>                                
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
+
+                <a onClick={hamburger} className="hamburger">
+                    <img src="./image/icon-hamburger.svg" alt="" />
+                    {/* <img src="./image/icon-close.svg" alt="" /> */}
+                </a>
+
             </nav>
         </header>
     );

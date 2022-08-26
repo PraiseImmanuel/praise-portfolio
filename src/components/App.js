@@ -8,7 +8,8 @@ import "../styles/Footer.css";
 
 import React, { useState, useEffect } from "react";
 
-import Intro from "./Intro";
+// import Intro from "./IntendedIntro";
+import Intro from "./UsedIntro"
 import Canvas from "./Canvas";
 import About from "./About";
 import Contact from "./Contact";
@@ -16,11 +17,6 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Home from "./Home";
 import Projects from "./Projects";
-
-
-// const AnimatedIntro = () => {
-//     return <Intro />;
-// }
 
 const Components = () => {
     return(
@@ -43,11 +39,11 @@ const App = () => {
     useEffect(() => {
         setTimeout(() => {
             setIsLoading(false);
-            }, 9000);
+            }, 6950);
     }, []);
 
     return isLoading ? <Intro /> : Components();
-    // return Components();
+    // return <Components/>;
 };
 
 export default App;

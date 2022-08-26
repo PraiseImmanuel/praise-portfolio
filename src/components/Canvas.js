@@ -1,8 +1,14 @@
 import "../styles/Canvas.css";
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // Canvas Component
 const Canvas = () => {
+    const [height, setHeight] = useState(null);
+    const [width, setWidth] = useState(null);
+    useEffect(() => {
+        setHeight(document.querySelector('.home-container').offsetHeight);
+        setWidth(document.querySelector('.home-container').offsetWidth);
+    }, [height, width])
     //adding ref to canvas
     const canvas = React.useRef();
     useEffect(() => {
@@ -10,7 +16,7 @@ const Canvas = () => {
         MouseTrail(context, canvas);
     });
     return (
-        <canvas className="canvas" ref={canvas} height={window.innerHeight} width={window.innerWidth} />
+        <canvas className="canvas" ref={canvas} height={height} width={width} />
     );
 }
 

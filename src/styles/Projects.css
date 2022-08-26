@@ -29,8 +29,15 @@
     border-radius: var(--border-radius);
     filter: grayscale(100%) contrast(1) brightness(90%);
     height: clamp(10rem, 20vw, 30rem);  
-    mix-blend-mode: lighten; 
+    mix-blend-mode: lighten;
+    transition: var(--transition); 
 }
+
+.project-image .filter:hover{
+    filter: none; 
+    mix-blend-mode: normal; 
+}
+
 
 .image-link-overlay{
     background-color: var(--grayish-pink-transperent);
@@ -80,13 +87,81 @@
     margin-top: 2rem;
 }
 
-.project-link{
-    background-color: var(--light-blue);
-    border-radius: 2rem;
-    margin-left: 1rem;
-    padding: 0.5rem 1rem;
+@media screen and (max-width: 1100px) {
+    .project-title-and-description{
+        bottom: -10rem;
+        left: clamp(10rem, 20vw, 30rem);
+        width: clamp(15rem, 50vw, 30rem);
+    }
 }
 
-.project-link a{
-    color: var(--white);
+@media screen and (max-width: 768px) {
+    .project-container{
+        justify-content: flex-start;
+    }
+    
+    .project-image .filter{
+        height: 12rem;
+    }
+
+    .project-title-and-description{
+        bottom: -13rem;
+        left: clamp(7rem, 10vw, 15rem);
+        width: 25rem;
+    }
+
+    .project-description{
+        font-size: var(--fs-sl);
+    }
+}
+
+@media screen and (max-width: 644px) {
+    .project-title-and-description {
+        left: clamp(2rem, 5vw, 15rem);
+        width: 22rem;
+    }
+
+    .project-title > h3 {
+        font-size: 1.4rem;
+    }
+
+    .project-number > img {
+        height: 5rem;
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .project-container-inner{
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+    
+    .project-title-and-description{
+        left: 0;
+    }
+}
+
+
+@media screen and (max-width: 438px) {
+    .project-container, .project-image{
+        justify-content: center;
+    }
+
+    .project-image .filter{
+        height: 10rem;
+    }
+
+    .project-title-and-description{
+        width: 17.875rem;
+        left: 0;
+    }
+
+    .project-title > h3 {
+        font-size: var(--fs-l);
+    }
+
+    .project-description{
+        font-size: var(--fs-xsl);
+    }
 }

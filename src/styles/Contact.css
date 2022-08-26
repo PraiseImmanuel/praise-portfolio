@@ -1,5 +1,6 @@
 .contact-container{
     margin-top: 8rem;
+    padding-bottom: 12rem;
 }
 
 form{
@@ -18,7 +19,6 @@ form{
 .form-container{
     background-color: var(--dark-blue);
     border-radius: 0.5rem;
-    margin-left: 1.5rem;
     padding:2rem;
 }
 
@@ -28,11 +28,15 @@ form{
     display: flex;
     justify-content: center;
     height: 3rem;
+    position: relative;
 }
 
 .input-box > input, textarea{
     border: none;
     background-color: transparent;
+    color: var(--dark-blue);
+    font-size: var(--fs-md);
+    font-family: var(--ff-body);
     padding-left: 1.25rem;
     width: 100%;
 }
@@ -83,4 +87,83 @@ textarea{
 
 .send > a{
     color: var(--white);
+}
+
+input:focus .input-box{
+    background-color: var(--light-blue-input);
+}
+
+@media screen and (max-width: 800px) {
+    .form-and-send-button{
+        width: 35rem;
+    }
+
+    .input-box > input, textarea{
+        font-size: var(--fs-sl);
+    }
+
+    ::placeholder {
+        font-size: var(--fs-sl);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-container{
+        margin-top: 15rem;
+        padding-bottom: 7rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .form-and-send-button{
+        width: 25rem;
+    }
+
+    .input-box{
+        height: 2.25rem;
+    }
+
+    .input-box > input, textarea{
+        font-size: 0.75rem;
+    }
+
+    ::placeholder{
+        font-size: 0.75rem;
+    }
+
+    .input-box > input textarea{
+        padding-left: 1rem;
+    }
+
+    .send{
+        margin-top: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 495px) {
+    .form-and-send-button{
+        width: 21.5rem;
+    }
+
+    .form-container{
+        padding: 1.25rem;
+    }
+
+    .full-width{
+        flex-direction: column;
+    }
+
+    .name, .email{
+        width: 100%;
+    }
+
+    .name{
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width:412px) {
+    .form-and-send-button{
+        width: 18rem;
+    }
 }

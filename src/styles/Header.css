@@ -4,7 +4,7 @@
     display: flex;
     height: 4.375rem;
     justify-content: space-between;
-    padding: 0 5rem;
+    padding: 2rem 5rem;
     position: fixed;
     top: 0;
     width: 100%;
@@ -24,6 +24,19 @@
     display: flex;
     -webkit-box-align: center;
     align-items: center;
+}
+
+.hamburger{
+    display: none;
+}
+
+.hamburger img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.close{
+    display: none;
 }
 
 .nav-links > ul{
@@ -49,29 +62,36 @@
     width: 100%;
     display: block;
     overflow: hidden;
+    cursor: pointer;
 }
 
-.nav-link > a.active{
-    color: var(--light-blue);
+.nav-link.one{
+    opacity: 0;
+    transition: var(--transition);        
+    animation: animateDisplay 0.8s linear forwards;
 }
 
 .nav-link.two{
-    animation: animateUpwards 0.5s cubic-bezier(0.65, 0.05, 0.38, 0.94) 0.1s;
+    animation: animateUpwards 0.6s cubic-bezier(0.65, 0.05, 0.38, 0.94) 0.1s;
 }
 
 .nav-link.three{
-    animation: animateUpwards 0.5s cubic-bezier(0.65, 0.05, 0.38, 0.94) 0.2s;
+    animation: animateUpwards 0.6s cubic-bezier(0.65, 0.05, 0.38, 0.94) 0.25s;
 }
 
 .nav-link.four{
-    animation: animateUpwards 0.5s cubic-bezier(0.65, 0.05, 0.38, 0.94) 0.3s;
+    animation: animateUpwards 0.6s cubic-bezier(0.65, 0.05, 0.38, 0.94) 0.35s;
 }
 
 .nav-link.five{
-    animation: animateUpwards 0.5s cubic-bezier(0.65, 0.05, 0.38, 0.94) 0.4s;
+    animation: animateUpwards 0.6s cubic-bezier(0.65, 0.05, 0.38, 0.94) 0.45s;
 }
 
 .nav-link > a:hover{
+    color: var(--light-blue);
+}
+
+.nav-link > a.active{
     color: var(--light-blue);
 }
 
@@ -110,4 +130,66 @@
     -webkit-transform: translateY(0%);
     -moz-transform: translateY(0%);
     -o-transform: translateY(0%);
+}
+
+@media screen and (max-width:800px) {
+    .header{
+        padding: 3rem;       
+    }
+    
+    .nav-links{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .nav-link > a{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .header{
+        padding: 0.5rem;       
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .nav-link{
+        padding: 0.5rem;
+    }
+
+}
+
+.display{
+    display: flex;
+    position: absolute;
+    background-color: var(--dark-blue);
+    top: 4.375rem;
+    right: 0;
+    justify-content: flex-end;
+    background-color: var(--dark-blue-transperent);
+    width: 100vw;
+}
+
+.display ul{
+    background-color: var(--dark-blue);
+    border-top: 0.25px solid var(--white);
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 12.5rem;
+}
+
+.display li{
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid var(--white) ;
+}
+
+.display li:first-child{
+    border-top: 1px solid var(--white);
 }

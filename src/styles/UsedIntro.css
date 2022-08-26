@@ -1,0 +1,165 @@
+#animated-intro{
+    background-color: #172336;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    transition: all 1s cubic-bezier(0.25, 0.74, 0.64, 0.55);
+    z-index: 11111;
+    width: 100vw;
+    animation: change-color 1s ease-in forwards 6s;
+}
+
+.fade-out{
+    animation: fade-out 2.25s ease-in forwards 4s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    position: relative; 
+    width: 220px;
+    height: 220px;
+    filter: url(#gooey);
+    animation: animate 10s linear infinite 0.1s;
+}
+
+.first{
+    --i: 1;
+}
+
+.second{
+    --i: 2;
+}
+
+.third{
+    --i: 3;
+}
+
+.fourth{
+    --i: 4;
+}
+
+.fifth{
+    --i: 5;
+}
+
+.sixth{
+    --i: 6;
+}
+
+.seventh{
+    --i: 7;
+}
+
+.eighth{
+    --i: 8;
+}
+
+.rotate-first{
+    --j: 1;
+}
+
+.rotate-second{
+    --j: 2;
+}
+
+.rotate-third{
+    --j: 3;
+}
+
+.rotate-fourth{
+    --j: 4;
+}
+
+.container span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform: rotate(calc(45deg * var(--i)));
+}
+
+.container span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(50% - 17.5px);
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(45deg, #e6f7f6, #46dbd1);
+    border-radius: 50%;
+    box-shadow: 0 0 30px #4aada7;
+}
+
+.rotate{
+    animation: animate 3s ease-in-out infinite;
+    animation-delay: calc(-0.15s * var(--j));
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fade-out{
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes change-color{
+    0%{
+        background-color: #172336;
+    }
+
+    100%{
+        background-color: #21304A;
+    }
+}
+
+svg{
+    width: 0;
+    height: 0;
+}
+
+.welcome{
+    color: #e6f7f6;
+    font-size: 1.1rem;
+    font-family: "Montserrat", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: block;
+    position: absolute;
+    top: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .welcome{
+        font-size: 0.875rem;
+    }
+
+    .container{
+        height: 175px;
+        width: 175px;
+    }
+
+    .container span::before{
+        left: calc(50% - 15px);
+        height: 30px;
+        width: 30px;
+    }
+}

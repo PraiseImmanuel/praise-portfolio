@@ -4,8 +4,10 @@
 :root{
     /* Primary color */
     --dark-blue: #21304A;
+    --dark-blue-transperent: #21304ac4;
     --light-blue: #46dbd1;
     --light-blue-scroll: #96ddd8;
+    --light-blue-input: #bae2e0;
     /* Neutral color */
     --grayish-pink: #ebd1de;
     --pink: #e7b6cf;
@@ -15,9 +17,11 @@
 
     /* Font size */
     --fs-xl: 1.875rem;
+    --fs-ll: 1.5rem;
     --fs-l: 1.2rem;
     --fs-md: 1rem;
     --fs-sl: 0.875rem;
+    --fs-xsl: 0.7rem;
     /* --fs-: 1.45rem; */
     /* Font Weight */
     --fw-xbold: 800;
@@ -85,8 +89,8 @@ a{
     margin: 0 clamp(6rem, 15vw, 12rem);
 }
 
-.padded-box{
-    padding: 10rem 0;
+.padded-container{
+    padding: 12rem 0 0;
 }
 
 .h2-heading{
@@ -128,6 +132,24 @@ a{
 .fade-in.appear{
     opacity: 1;
     transform: translateY(0);
+    transition: var(--transition);
+}
+
+.button{
+    background-color: var(--light-blue);
+    color: var(--white);
+    display: block;
+    border-radius: 2rem;
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.button:hover{
+    opacity: 0.7;
+}
+
+.button:active {
+    transform: translateY(0.5rem);
 }
 
 @keyframes animateDownwards{
@@ -168,5 +190,74 @@ a{
     100% {
         -webkit-transform: translateY(0);
         transform: translateY(0);
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@keyframes animateDisplay{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width:1399px){
+    .margin-container{
+        margin: 0 clamp(6rem, 10vw, 12rem);
+    }
+}
+
+@media screen and (max-width:768px){    
+    .margin-container{
+        margin: 0 clamp(3rem, 10vw, 6rem);
+    }
+
+    .padded-container{
+        padding: 7rem 0 0;
+    }
+
+    .h2-heading h2{
+        font-size: var(--fs-ll);
+    }
+
+    .h2-heading::after {
+        margin-top: 0;
+        height: 0.215rem;
+    }
+
+    .icon-photo {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .button{
+        font-size: var(--fs-sl);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .margin-container {
+        margin: 0 2rem;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .margin-container{
+        margin: 1rem;
     }
 }
