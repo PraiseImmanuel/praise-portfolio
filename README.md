@@ -1,3 +1,3 @@
-# praise-portfolio
+# Praise-Portfolio
 My First Portfolio Website
 
