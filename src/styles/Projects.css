@@ -1,7 +1,7 @@
 .project-container{
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin: 2rem 0 20rem;
 }
 
 .project-container-inner{

@@ -21,7 +21,8 @@ import Projects from "./Projects";
 const Components = () => {
     return(
         <div>
-            <Canvas />
+            {/* Make sure canva animation do not run on small devices */}
+            ({window.innerWidth >= 768 ? <Canvas /> : <div/>})
             <Header/>
             <Home />
             <About />
@@ -34,6 +35,7 @@ const Components = () => {
 
 
 const App = () => {
+    // Display welcome animation while page loads
     const [isLoading, setIsLoading] = useState(true);
   
     useEffect(() => {
@@ -43,7 +45,6 @@ const App = () => {
     }, []);
 
     return isLoading ? <Intro /> : Components();
-    // return <Components/>;
 };
 
 export default App;

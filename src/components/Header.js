@@ -1,18 +1,45 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 import { animateScroll as scroll } from 'react-scroll';
 
-const hamburger = () =>{
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('display');
+// change hamburger icon when neccesary
+const displayedIcon = () => {
     const displayedIcon = document.querySelector('.hamburger img');
     document.querySelector('.nav-links').classList.contains('display') ? 
         displayedIcon.setAttribute('src', './image/icon-close.svg') :  
         displayedIcon.setAttribute('src', './image/icon-hamburger.svg');
+}
 
+// toggle navlinks display on clicking hamburger
+const hamburger = () =>{
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('display');
+    displayedIcon();
 }
 
 const Header = () => {
+    const ref = useRef();
+
+    useEffect(() => {
+        //close nav when anywhere except the ul tag is clicked
+        const onBodyClick = (event) => {
+            //Exempt the ref's tag and children from closing nav
+            if(ref.current.contains(event.target)){
+                return;
+              
+            }
+            //Notice any click on the nav-link and close
+            document.querySelector('.nav-links').classList.remove('display');
+            displayedIcon();
+         };
+
+        document.querySelector('.nav-links').addEventListener('click', onBodyClick);
+
+        return () => {
+            document.removeEventListener('click', onBodyClick)
+        }
+    }, []);
+
     return(
         <header className="header">
             <nav className="nav">
@@ -23,8 +50,8 @@ const Header = () => {
                     </a>
                 </div>
 
-                <div className="nav-links">
-                    <ul>
+                <div className="nav-links" >
+                    <ul ref={ref}>
                         <li className="nav-link two">
                              <Link activeClass="active" to="home" onClick={() => scroll.scrollToTop()} >
                                 <span className="displayed">Home</span>
@@ -57,7 +84,6 @@ const Header = () => {
 
                 <a onClick={hamburger} className="hamburger">
                     <img src="./image/icon-hamburger.svg" alt="" />
-                    {/* <img src="./image/icon-close.svg" alt="" /> */}
                 </a>
 
             </nav>

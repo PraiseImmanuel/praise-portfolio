@@ -14,16 +14,16 @@
 }
 
 .fade-out{
-    animation: fade-out 2.25s ease-in forwards 4s;
-    position: relative;
     display: flex;
     justify-content: center;
+    position: relative;
+    animation: fade-out 2.25s ease-in forwards 4s;
 }
 
 .container{
     position: relative; 
-    width: 220px;
     height: 220px;
+    width: 220px;
     filter: url(#gooey);
     animation: animate 10s linear infinite 0.1s;
 }

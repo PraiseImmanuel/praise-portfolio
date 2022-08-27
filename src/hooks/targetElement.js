@@ -1,9 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 
 const targetElement = (options) => {
+    // create ref
     const containerRef = useRef(null);
+    // state  
     const [ isVisible, setIsVisible ] = useState(false);
-    
+    // IntersectionObserver callbackFunction
     const callbackFunction = (entries) => {
       const [ entry ] = entries;
       if (entry.isIntersecting) setIsVisible(true);

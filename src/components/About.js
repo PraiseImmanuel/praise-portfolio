@@ -2,18 +2,18 @@ import React from "react";
 import targetElement from "../hooks/targetElement";
 
 const About = () => {
+    //use custom hook created in targetElement.js to add intersection observer
+    //and add the required styling
+    
     const [containerRef1, isVisible1] = targetElement();
     const [containerRef2, isVisible2] = targetElement({
-        rootMargin: '0px 0px 88% 0px',
-        threshold: 1.0
+        rootMargin: '0px 0px 90% 0px',
+        //fix threshold on small device
+        threshold: (window.innerWidth >= 768 ? 1.0 : 0.5)
       });
-    const [containerRef3, isVisible3] = targetElement({
-        rootMargin: '0px 0px 88% 0px',
-        threshold: 1.0
-      });  
     const fadeOne = isVisible1 ? 'appear' : '';
     const fadeTwo = isVisible2 ? 'appear' : '';
-    const fadeThree = isVisible3 ? 'appear' : '';
+
     return(
         <section id="about">
             <div className="about-container margin-container padded-container">
@@ -26,8 +26,8 @@ const About = () => {
                     </div>
                 </div>
                 
-                <div className="about-box-and-image">
-                    <div ref={containerRef2} className={`about-box fade-in ${fadeTwo}`}>
+                <div ref={containerRef2}  className={`about-box-and-image fade-in ${fadeTwo}`}>
+                    <div className="about-box">
                         <p>
                             Hello! I am Praise Immanuel. I love creating things that makes daily living easier and more productive. 
                         </p>
@@ -41,7 +41,7 @@ const About = () => {
                         </p>
                     </div>
 
-                    <div ref={containerRef3} className={`about-img fade-in ${fadeThree}`}>
+                    <div className="about-img">
                         <img src="/image/about-img-alt.png" alt="" />
                     </div>
                 </div>    

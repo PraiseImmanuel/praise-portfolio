@@ -3,12 +3,14 @@ import React, { useEffect, useState } from 'react';
 
 // Canvas Component
 const Canvas = () => {
+    //state for getting device width in case of change of orientation
     const [height, setHeight] = useState(null);
     const [width, setWidth] = useState(null);
     useEffect(() => {
         setHeight(document.querySelector('.home-container').offsetHeight);
         setWidth(document.querySelector('.home-container').offsetWidth);
     }, [height, width])
+    
     //adding ref to canvas
     const canvas = React.useRef();
     useEffect(() => {
@@ -20,6 +22,7 @@ const Canvas = () => {
     );
 }
 
+//canva animation
 const MouseTrail = (context, canvas) => {
     const spots = [];
     const hue = [0];

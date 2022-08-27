@@ -26,14 +26,52 @@ const renderProjectLink = (gitLink, siteLink) => {
     );
 }
 
+const renderProject = (siteLink, image, imageAlt, projectNum, title, descrip, codeLink ) => {
+    return(
+            <div className="project-container-inner">
+                <div className="project-image">
+                    <a target="_blank" href={siteLink} rel="noopener noreferrer" className="image-link-overlay">
+                        <div className="filter">
+                            {renderImage(image, imageAlt)}
+                        </div>
+                    </a>
+                </div>
+
+                <div className="project-title-and-description">
+                    <div className="project-number">
+                        {renderImage(projectNum, "")}
+                    </div>
+                    <div className="project-title">
+                        {renderTitle(title)}
+                    </div>
+
+                    <div className="project-description">
+                        {renderDescription(descrip)}
+                    </div>
+
+                    {renderProjectLink(codeLink, siteLink)}
+                </div>
+            </div>
+    );
+}
+
+
 const Projects = () => {
     const [containerRef1, isVisible1] = targetElement();
+
     const [containerRef2, isVisible2] = targetElement({
         rootMargin: '0px 0px 65% 0px',
         threshold: 1.0
       });
+
+    const [containerRef3, isVisible3] = targetElement({
+        rootMargin: '0px 0px 65% 0px',
+        threshold: 1.0
+    });  
+    
     const fadeOne = isVisible1 ? 'appear' : '';
     const fadeTwo = isVisible2 ? 'appear' : '';
+    const fadeThree = isVisible3 ? 'appear' : '';
 
     return(
         <section id="projects">
@@ -46,39 +84,36 @@ const Projects = () => {
                         </a>
                     </div>
                 </div>
-
                 <div ref={containerRef2} className={`project-container fade-in ${fadeTwo}`}>
-                    <div className="project-container-inner">
-                        <div className="project-image">
-                            <a target="_blank" href="https://advice-website.netlify.app" rel="noopener noreferrer" className="image-link-overlay">
-                                <div className="filter">
-                                    {renderImage("/image/project1.jpg", "Project one")}
-                                </div>
-                            </a>
-                        </div>
-
-                        <div className="project-title-and-description">
-                            <div className="project-number">
-                                {renderImage("/image/one-stroke.png" , "")}
-                            </div>
-                            <div className="project-title">
-                                {renderTitle('Advice Generator App')}
-                            </div>
-
-                            <div className="project-description">
-                                {renderDescription(`
-                                    A web application that generates
-                                    random advice with nicely 
-                                    crafted interactivity.
-                                `)}
-                            </div>
-
-                            {renderProjectLink("https://github.com/PraiseImmanuel/advice-web-app", "https://advice-website.netlify.app")}
-                        </div>
-                    </div>
-
+                    {renderProject(
+                        "https://advice-website.netlify.app",
+                        "/image/project1.jpg",
+                        "Project one",
+                        "/image/one-stroke.png",
+                        'Advice Generator App',
+                        `
+                        A web application that generates
+                        random advice with nicely 
+                        crafted interactivity.
+                        `, 
+                        "https://github.com/PraiseImmanuel/advice-web-app"
+                    )}
                 </div>
 
+                <div ref={containerRef3} className={`project-container fade-in ${fadeThree}`}>
+                    {renderProject(
+                        "https://praiseimmanuel.github.io/ecommerce-product/",
+                        "/image/project2.jpg",
+                        "Project two",
+                        "/image/two-stroke.png",
+                        'E-commerce website',
+                        `
+                        A functional website showcasing 
+                        products for sale developed with vanila javascript.
+                        `, 
+                        "https://github.com/PraiseImmanuel/ecommerce-product"
+                    )}
+                </div>
             </div>    
         </section>
     );
