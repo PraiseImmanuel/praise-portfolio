@@ -242,6 +242,10 @@ a{
     .margin-container {
         margin: 0 2rem;
     }
+
+    .h2-heading h2{
+        font-size: 1.4rem;
+    }
 }
 
 @media screen and (max-width: 340px) {
