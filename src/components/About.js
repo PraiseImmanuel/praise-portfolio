@@ -7,9 +7,9 @@ const About = () => {
     
     const [containerRef1, isVisible1] = targetElement();
     const [containerRef2, isVisible2] = targetElement({
-        rootMargin: '0px 0px 90% 0px',
+        rootMargin: '0px 0px 110% 0px',
         //fix threshold on small device
-        threshold: (window.innerWidth >= 768 ? 1.0 : 0.5)
+        threshold: (window.innerWidth >= 768 ? 1.0 : 0.35)
       });
     const fadeOne = isVisible1 ? 'appear' : '';
     const fadeTwo = isVisible2 ? 'appear' : '';
@@ -20,9 +20,6 @@ const About = () => {
                 <div ref={containerRef1} className={`h2-heading fade-in ${fadeOne}`} >
                     <div className="heading-and-image">
                         <h2>About Me</h2>
-                        <a target="_blank" href="https://icons8.com/icon/aJPLw-4jUCR3/man-technologist" rel="noopener noreferrer">
-                            <img src="/image/programmer-desktop.png" alt="Man Techonologist" className="icon-photo" />
-                        </a>
                     </div>
                 </div>
                 
@@ -33,7 +30,11 @@ const About = () => {
                         </p>
 
                         <p>
-                            I specialise in creating and maintaining responsive web-based applications. I am passionate about communicating and building brand integrity, while maintaining a healthy balance between functionality and visual impact in all my work. 
+                            I specialise in creating and maintaining responsive web-based applications.
+                        </p>
+
+                        <p>
+                        I am passionate about learning and development with a desire to provide solutions that makes the customer experience memorable and lovable,  while maintaining a healthy balance between functionality and visual impact in all my work.
                         </p>
 
                         <p>

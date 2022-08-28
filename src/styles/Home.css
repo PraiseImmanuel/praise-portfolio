@@ -2,7 +2,7 @@
     background-color: var(--dark-blue);
     height: 100vh;
     position: relative;
-    padding-top: 1.5rem;
+    /* padding-top: 1.5rem; */
 }
 
 .image-and-intro{
@@ -221,6 +221,12 @@
     }
 }
 
+@media screen and (max-width: 800px) {
+    .image-and-intro{
+        height: calc(100vh - 10.375rem);
+    }
+}
+
 @media screen and (max-width: 768px){
     .social-links{
         display: none;
@@ -235,6 +241,10 @@
 }
 
 @media screen and (max-width: 500px){
+    .image-and-intro{
+        height: calc(100vh - 5.375rem);
+    }
+    
     .headings > h2{
         font-size: clamp(1.5rem, 7vw, 4rem);
         line-height: 1.2;

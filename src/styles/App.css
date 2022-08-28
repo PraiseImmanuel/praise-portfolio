@@ -102,13 +102,6 @@ a{
     display: flex;
 }
 
-.icon-photo{
-    margin-left: 0.5rem;
-    width:2.5rem;
-    height: 2.5rem;
-}
-
-
 .h2-heading::after{
     background-color: var(--light-blue);
     content: '';
@@ -238,11 +231,6 @@ a{
     .h2-heading::after {
         margin-top: 0;
         height: 0.215rem;
-    }
-
-    .icon-photo {
-        width: 2rem;
-        height: 2rem;
     }
 
     .button{

@@ -22,7 +22,7 @@ const Components = () => {
     return(
         <div>
             {/* Make sure canva animation do not run on small devices */}
-            ({window.innerWidth >= 768 ? <Canvas /> : <div/>})
+            {window.innerWidth >= 768 ? <Canvas /> : <div/>}
             <Header/>
             <Home />
             <About />

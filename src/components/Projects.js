@@ -79,9 +79,6 @@ const Projects = () => {
                 <div ref={containerRef1} className={`h2-heading fade-in ${fadeOne}`} >
                     <div className="heading-and-image">
                         <h2>Recent Projects</h2>
-                        <a target="_blank" href="https://icons8.com/icon/aJPLw-4jUCR3/man-technologist" rel="noopener noreferrer">
-                            <img src="/image/bag-desktop.png" alt="bag icon" className="icon-photo" />
-                        </a>
                     </div>
                 </div>
                 <div ref={containerRef2} className={`project-container fade-in ${fadeTwo}`}>
