@@ -1,6 +1,6 @@
 .home-container{
     background-color: var(--dark-blue);
-    height: 96.5vh;
+    height: 100vh;
     position: relative;
     padding-top: 1.5rem;
 }
@@ -241,6 +241,10 @@
 }
 
 @media screen and (max-width: 500px){
+    .home-container{
+        height: 96.5vh;
+    }
+
     .intro{
         align-self: center;
         text-align: center;
