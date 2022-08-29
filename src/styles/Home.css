@@ -261,8 +261,8 @@
 
     .image-container{
         align-self: center;
-        margin: 0;
-        padding: 0 0 2rem 0;
+        margin: 1.5rem 0;
+        padding: 0 0.8rem 2rem 0;
     }
 
     .image-box, .image-box-stroke{
