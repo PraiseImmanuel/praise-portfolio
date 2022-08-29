@@ -9,7 +9,7 @@ const About = () => {
     const [containerRef2, isVisible2] = targetElement({
         rootMargin: '0px 0px 110% 0px',
         //fix threshold on small device
-        threshold: (window.innerWidth >= 768 ? 1.0 : 0.35)
+        threshold: (window.innerWidth >= 768 ? 1.0 : 0.1)
       });
     const fadeOne = isVisible1 ? 'appear' : '';
     const fadeTwo = isVisible2 ? 'appear' : '';
