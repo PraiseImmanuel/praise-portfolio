@@ -44,7 +44,7 @@ const Header = () => {
         <header className="header">
             <nav className="nav">
                 <div className="nav-link one">
-                    <a href="/">
+                    <a href="https://drive.google.com/file/d/1Q9bPwB0wOX3pvqW13GLAaWXO2NW65bNH/view?usp=sharing"  rel="noopener noreferrer" target="_blank">
                         <span className="displayed">Praise Immanuel</span>
                         <span className="displayed-on-hover">Download CV</span>
                     </a>
