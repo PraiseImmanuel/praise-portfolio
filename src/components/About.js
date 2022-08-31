@@ -26,7 +26,7 @@ const About = () => {
                 <div ref={containerRef2}  className={`about-box-and-image fade-in ${fadeTwo}`}>
                     <div className="about-box">
                         <p>
-                            Hello! I am Praise Immanuel. I love creating things that makes daily living easier and more productive. 
+                            Hello! I am Praise Immanuel. I love creating things that make daily living easier and more productive. 
                         </p>
 
                         <p>
@@ -34,7 +34,7 @@ const About = () => {
                         </p>
 
                         <p>
-                        I am passionate about learning and development with a desire to provide solutions that makes the customer experience memorable and lovable,  while maintaining a healthy balance between functionality and visual impact in all my work.
+                        I am passionate about learning and development with a desire to provide solutions that make the customer experience memorable and lovable,  while maintaining a healthy balance between functionality and visual impact in all my work.
                         </p>
 
                         <p>
