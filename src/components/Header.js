@@ -32,7 +32,7 @@ const Header = () => {
             <nav className="nav">
                 <div className="nav-link one">
                     <a
-                        href="https://drive.google.com/file/d/1Q9bPwB0wOX3pvqW13GLAaWXO2NW65bNH/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1PT92tRIoz0QDJ28A1ACacObN-ePqBpmF/view?usp=sharing"
                         rel="noopener noreferrer"
                         target="_blank"
                     >
@@ -108,7 +108,7 @@ const Header = () => {
                     toggled={displayUl}
                     toggle={setDisplayUl}
                     duration={1}
-                    size={30}
+                    size={28}
                     color={"#ffffff"}
                 />
             </nav>
