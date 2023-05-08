@@ -1,8 +1,8 @@
 import React from "react";
 
 const ImageCard = () => {
-    return(
-        <div className="image-container animated-image">
+    return (
+        <div className="image-container">
             <div className="image-box">
                 <img src="/image/praise.png" alt="Praise Immanuel" />
             </div>
@@ -10,6 +10,6 @@ const ImageCard = () => {
             <div className="image-box-stroke"></div>
         </div>
     );
-}
+};
 
 export default ImageCard;

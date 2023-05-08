@@ -1,6 +1,7 @@
 .header {
     background-color: var(--dark-blue);
     backdrop-filter: blur(10px);
+    border-bottom: 1px solid #ffffff10;
     display: flex;
     height: 4.375rem;
     justify-content: space-between;
@@ -69,23 +70,23 @@
 .nav-link.one {
     opacity: 0;
     transition: var(--transition);
-    animation: animateDisplay 0.8s linear forwards;
+    animation: animateDisplay 0.8s linear 6.75s forwards;
 }
 
 .nav-link.two {
-    animation: animateUpwards 0.6s cubic-bezier(0.65, 0.05, 0.38, 0.94) 0.1s;
+    animation: animateUpwards 0.8s ease-in 6.5s;
 }
 
 .nav-link.three {
-    animation: animateUpwards 0.6s cubic-bezier(0.65, 0.05, 0.38, 0.94) 0.25s;
+    animation: animateUpwards 0.8s ease-in 6.75s;
 }
 
 .nav-link.four {
-    animation: animateUpwards 0.6s cubic-bezier(0.65, 0.05, 0.38, 0.94) 0.35s;
+    animation: animateUpwards 0.8s ease-in 7s;
 }
 
 .nav-link.five {
-    animation: animateUpwards 0.6s cubic-bezier(0.65, 0.05, 0.38, 0.94) 0.45s;
+    animation: animateUpwards 0.8s ease-in 7.25s;
 }
 
 .nav-link > a:hover {
@@ -138,6 +139,13 @@
     display: none;
 }
 
+@media screen and (min-width: 1280px) {
+    nav {
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .header {
         padding: 3rem;
@@ -159,7 +167,9 @@
 
 @media screen and (max-width: 500px) {
     .header {
-        padding: 0.5rem;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.8rem;
+        height: max-content;
     }
 }
 
@@ -173,7 +183,7 @@
     display: flex;
     position: absolute;
     background-color: var(--dark-blue);
-    top: 4.375rem;
+    top: 3.56rem;
     right: 0;
     justify-content: flex-end;
     background-color: var(--dark-blue-transperent);

@@ -1,9 +1,9 @@
 /* ======================
     ||css variables||
 ==================== */
-:root{
+:root {
     /* Primary color */
-    --dark-blue: #21304A;
+    --dark-blue: #21304a;
     --dark-blue-transperent: #21304ac4;
     --light-blue: #46dbd1;
     --light-blue-scroll: #96ddd8;
@@ -16,12 +16,12 @@
     --white: #ffffff;
 
     /* Font size */
-    --fs-xl: 1.875rem;
+    --fs-xl: 1.65rem;
     --fs-ll: 1.5rem;
-    --fs-l: 1.2rem;
-    --fs-md: 1rem;
-    --fs-sl: 0.875rem;
-    --fs-xsl: 0.7rem;
+    --fs-l: 1.1rem;
+    --fs-md: 0.9rem;
+    --fs-sl: 0.675rem;
+    --fs-xsl: 0.6rem;
     /* --fs-: 1.45rem; */
     /* Font Weight */
     --fw-xbold: 800;
@@ -34,42 +34,41 @@
     --ff-body: "Montserrat", Helvetica;
     /* Transition */
     --transition: all 0.4s cubic-bezier(0.65, 0.05, 0.38, 0.94);
-
 }
 
 /* Scroll Bar */
 
-::-webkit-scrollbar{
-    width: 0.85rem;
+::-webkit-scrollbar {
+    width: 0.5rem;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     background-color: var(--blue-white);
     border-radius: 1rem;
     margin-block: 0.5rem;
-} 
+}
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background-color: var(--dark-blue);
     border-radius: 1rem;
     border: 0.15rem solid var(--blue-white);
 }
 
-@supports (scrollbar-color: red blue){
-    *{
+@supports (scrollbar-color: red blue) {
+    * {
         scrollbar-width: thin;
         scrollbar-color: var(--dark-blue) var(--blue-white);
         scroll-behavior: smooth;
     }
 }
 
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-body{
+body {
     font-family: var(--ff-body);
     font-size: var(--fs-md);
     font-weight: var(--fw-regular);
@@ -77,58 +76,58 @@ body{
     width: 100%;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.margin-container{
-    margin: 0 clamp(6rem, 15vw, 12rem);
+.margin-container {
+    margin: auto;
+    max-width: 1200px;
 }
 
-.padded-container{
-    padding: 12rem 0 0;
+.padded-container {
+    min-height: calc(100vh + 5rem);
 }
 
-.h2-heading{
+.h2-heading {
     padding: 1.5rem 0;
-    margin-top: -5rem;
 }
 
-.heading-and-image{
+.heading-and-image {
     display: flex;
 }
 
-.h2-heading::after{
+.h2-heading::after {
     background-color: var(--light-blue);
-    content: '';
+    content: "";
     display: block;
     margin-top: 0.4rem;
-    height: 0.3rem;
+    height: 0.2rem;
     width: 5rem;
 }
 
-.h2-heading h2{
+.h2-heading h2 {
     font-size: var(--fs-xl);
     color: var(--light-blue);
 }
 
-.fade-in{
+.fade-in {
     opacity: 0;
     transform: translateY(100%);
     transition: var(--transition);
 }
 
-.fade-in.appear{
+.fade-in.appear {
     opacity: 1;
     transform: translateY(0);
     transition: var(--transition);
 }
 
-.button{
+.button {
     background-color: var(--light-blue);
     color: var(--white);
     display: block;
@@ -137,7 +136,7 @@ a{
     padding: 0.5rem 1rem;
 }
 
-.button:hover{
+.button:hover {
     opacity: 0.7;
 }
 
@@ -145,27 +144,27 @@ a{
     transform: translateY(0.5rem);
 }
 
-@keyframes animateDownwards{
-    0%{
+@keyframes animateDownwards {
+    0% {
         opacity: 0;
         transform: translateY(-50%);
-        transition: var(--transition);        
+        transition: var(--transition);
     }
 
-    100%{
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
 @keyframes animateUpwards {
-    0%{
+    0% {
         opacity: 0;
         transform: translateY(50%);
-        transition: var(--transition);        
+        transition: var(--transition);
     }
 
-    100%{
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
@@ -198,33 +197,35 @@ a{
     }
 }
 
-@keyframes animateDisplay{
-    0%{
+@keyframes animateDisplay {
+    0% {
         opacity: 0;
     }
 
-    100%{
+    100% {
         opacity: 1;
     }
 }
 
-
-@media screen and (max-width:1399px){
-    .margin-container{
-        margin: 0 clamp(6rem, 10vw, 12rem);
+@media screen and (max-width: 1380px) {
+    .margin-container {
+        margin: 0 6rem;
     }
 }
 
-@media screen and (max-width:768px){    
-    .margin-container{
-        margin: 0 clamp(3rem, 10vw, 6rem);
+@media screen and (max-width: 1280px) {
+    .margin-container {
+        margin: 0 auto;
+        max-width: 80vw;
     }
+}
 
-    .padded-container{
+@media screen and (max-width: 768px) {
+    .padded-container {
         padding: 7rem 0 0;
     }
 
-    .h2-heading h2{
+    .h2-heading h2 {
         font-size: var(--fs-ll);
     }
 
@@ -233,23 +234,23 @@ a{
         height: 0.215rem;
     }
 
-    .button{
+    .button {
         font-size: var(--fs-sl);
     }
 }
 
 @media screen and (max-width: 500px) {
     .margin-container {
-        margin: 0 2rem;
+        max-width: 85vw;
     }
 
-    .h2-heading h2{
+    .h2-heading h2 {
         font-size: 1.4rem;
     }
 }
 
-@media screen and (max-width: 340px) {
-    .margin-container{
-        margin: 1rem;
+@media screen and (max-width: 320px) {
+    .margin-container {
+        max-width: 88vw;
     }
 }

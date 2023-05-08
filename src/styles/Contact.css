@@ -1,28 +1,38 @@
-.contact-container{
-    margin-top: -8rem;
+.contact-container {
     padding-bottom: 12rem;
 }
 
-form{
+form {
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-top: 2.5rem;
 }
 
-.form-and-send-button{
+.form-and-send-button {
     display: flex;
     flex-direction: column;
     width: 45rem;
 }
 
-.form-container{
-    background-color: var(--dark-blue);
-    border-radius: 0.5rem;
-    padding:2rem;
+button {
+    border: none;
+    color: inherit;
+    font: inherit;
 }
 
-.input-box, .text-area{
+button:focus {
+    outline: none;
+}
+
+.form-container {
+    background-color: var(--dark-blue);
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+.input-box,
+.text-area {
     background-color: var(--white);
     border-radius: 2.5rem;
     display: flex;
@@ -31,7 +41,8 @@ form{
     position: relative;
 }
 
-.input-box > input, textarea{
+.input-box > input,
+textarea {
     border: none;
     background-color: transparent;
     color: var(--dark-blue);
@@ -47,76 +58,80 @@ form{
     font-family: var(--ff-body);
 }
 
-.input-box > input:focus, textarea:focus{
+.input-box > input:focus,
+textarea:focus {
     outline: none;
 }
 
-.full-width{
+.full-width {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom:  1rem;
+    margin-bottom: 1rem;
 }
 
-.name{
+.name {
     width: 25%;
 }
 
-.email{
+.email {
     width: 72.5%;
 }
 
-.subject{
+.subject {
     margin: 1rem 0;
 }
 
-.text-area{
+.text-area {
     border-radius: 1rem;
     min-height: 8rem;
 }
 
-textarea{
+textarea {
     margin-top: 1rem;
     resize: none;
 }
 
-.send{
+.send {
     align-self: flex-end;
     margin-top: 2.5rem;
 }
 
-.send > a{
+.send > a {
     color: var(--white);
 }
 
-input:focus .input-box{
+input:focus .input-box {
     background-color: var(--light-blue-input);
 }
 
-.error-message, .sent-message{
+.error-message,
+.sent-message {
     display: none;
     font-size: var(--fs-md);
     padding: 1rem;
 }
 
-.error-message{
+.error-message {
     color: rgb(252, 63, 63);
 }
 
-.sent-message{
+.sent-message {
     color: rgb(86, 200, 86);
 }
 
-.error-message.display-message, .sent-message.display-message{
+.error-message.display-message,
+.sent-message.display-message {
     display: block;
 }
 
 @media screen and (max-width: 800px) {
-    .form-and-send-button{
+    .form-and-send-button {
         width: 35rem;
     }
 
-    .input-box > input, textarea{
+    .input-box > input,
+    textarea {
         font-size: var(--fs-sl);
     }
 
@@ -124,68 +139,69 @@ input:focus .input-box{
         font-size: var(--fs-sl);
     }
 
-    .error-message{
+    .error-message {
         font-size: var(--fs-sl);
     }
 }
 
 @media screen and (max-width: 768px) {
-    .contact-container{
-        margin-top: 15rem;
+    .contact-container {
         padding-bottom: 7rem;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .form-and-send-button{
+    .form-and-send-button {
         width: 25rem;
     }
 
-    .input-box{
+    .input-box {
         height: 2.25rem;
     }
 
-    .input-box > input, textarea{
+    .input-box > input,
+    textarea {
         font-size: 0.75rem;
     }
 
-    ::placeholder{
+    ::placeholder {
         font-size: 0.75rem;
     }
 
-    .input-box > input textarea{
+    .input-box > input textarea {
         padding-left: 1rem;
     }
 
-    .send{
+    .send {
         margin-top: 1.6rem;
     }
 }
 
 @media screen and (max-width: 495px) {
-    .form-and-send-button{
+    .form-and-send-button {
         width: 21.5rem;
     }
 
-    .form-container{
+    .form-container {
         padding: 1.25rem;
     }
 
-    .full-width{
+    .full-width {
         flex-direction: column;
     }
 
-    .name, .email{
+    .name,
+    .email {
         width: 100%;
     }
 
-    .name{
+    .name {
         margin-bottom: 1rem;
     }
 }
 
-@media screen and (max-width:412px) {
-    .form-and-send-button{
+@media screen and (max-width: 412px) {
+    .form-and-send-button {
         width: 18rem;
     }
 }

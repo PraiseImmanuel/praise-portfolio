@@ -108,7 +108,7 @@ const Header = () => {
                     toggled={displayUl}
                     toggle={setDisplayUl}
                     duration={1}
-                    size={28}
+                    size={20}
                     color={"#ffffff"}
                 />
             </nav>

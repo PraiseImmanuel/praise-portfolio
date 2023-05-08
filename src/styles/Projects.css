@@ -1,78 +1,83 @@
-.project-container{
+.project-container {
     display: flex;
     justify-content: center;
-    margin: 2rem 0 20rem;
+    margin: 6rem 0 10rem;
 }
 
-.project-container-inner{
+.project-container-inner {
+    align-items: center;
     position: relative;
+    display: flex;
+    flex-direction: column;
     width: clamp(10rem, 67vw, 60rem);
 }
 
-.project-number{
+.project-number {
     align-self: flex-end;
     margin-bottom: 0.5rem;
 }
 
-.project-number > img{
+.project-number > img {
     height: 8rem;
     text-align: right;
+    display: none;
 }
 
-.project-image{
+.project-image {
     display: flex;
     position: relative;
 }
 
-.project-image .filter{
+.project-image .filter {
     display: flex;
     border-radius: var(--border-radius);
     filter: grayscale(100%) contrast(1) brightness(90%);
-    height: clamp(10rem, 20vw, 30rem);  
+    height: clamp(10rem, 20vw, 30rem);
     mix-blend-mode: lighten;
-    transition: var(--transition); 
+    transition: var(--transition);
 }
 
-.project-image .filter:hover{
-    filter: none; 
-    mix-blend-mode: normal; 
+.project-image .filter:hover {
+    filter: none;
+    mix-blend-mode: normal;
 }
 
+.filter > img {
+    max-height: calc(184px * 1.45);
+    max-width: calc(326px * 1.45);
+}
 
-.image-link-overlay{
+.image-link-overlay {
     background-color: var(--grayish-pink-transperent);
 }
 
-.project-title-and-description{
+.project-title-and-description {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    left:  clamp(10rem, 30vw, 30rem);
-    bottom: -6rem;
     width: clamp(15rem, 38vw, 30rem);
 }
 
-.project-title{
+.project-title {
     background-color: var(--dark-blue);
     box-shadow: -0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.514);
     border-radius: 0.25rem;
     color: var(--white);
     padding: 1rem 2rem;
-    text-align: right;
+    text-align: center;
 }
 
-.project-description{
+.project-description {
     background-color: var(--white);
     box-shadow: -0.2rem 0.2rem 0.6rem rgba(0, 0, 0, 0.514);
     border-radius: 0.25rem;
-    color:var(--dark-blue);
+    color: var(--dark-blue);
     margin-top: 1rem;
     padding: 2rem;
-    text-align: right;
+    text-align: center;
     font-size: var(--fs-md);
 }
 
-.project-description p{
+.project-description p {
     font-weight: var(--fw-medium);
 }
 
@@ -81,14 +86,14 @@
     font-weight: var(--fw-semibold);
 }
 
-.project-links{
-    align-self: flex-end;
+.project-links {
+    align-self: center;
     display: flex;
     margin-top: 2rem;
 }
 
 @media screen and (max-width: 1100px) {
-    .project-title-and-description{
+    .project-title-and-description {
         bottom: -10rem;
         left: clamp(10rem, 20vw, 30rem);
         width: clamp(15rem, 50vw, 30rem);
@@ -96,21 +101,17 @@
 }
 
 @media screen and (max-width: 768px) {
-    .project-container{
-        justify-content: flex-start;
-    }
-    
-    .project-image .filter{
+    .project-image .filter {
         height: 12rem;
     }
 
-    .project-title-and-description{
+    .project-title-and-description {
         bottom: -13rem;
         left: clamp(7rem, 10vw, 15rem);
         width: 25rem;
     }
 
-    .project-description{
+    .project-description {
         font-size: var(--fs-sl);
     }
 }
@@ -132,27 +133,30 @@
 }
 
 @media screen and (max-width: 500px) {
-    .project-container-inner{
+    .project-container-inner {
         width: -moz-fit-content;
         width: fit-content;
     }
-    
-    .project-title-and-description{
+
+    .project-title-and-description {
         left: 0;
     }
 }
 
-
 @media screen and (max-width: 438px) {
-    .project-container, .project-image{
+    .project-container:last-of-type {
+        margin-bottom: 5rem;
+    }
+    .project-container,
+    .project-image {
         justify-content: center;
     }
 
-    .project-image .filter{
+    .project-image .filter {
         height: 10rem;
     }
 
-    .project-title-and-description{
+    .project-title-and-description {
         width: 17.875rem;
         left: 0;
     }
@@ -161,7 +165,7 @@
         font-size: var(--fs-l);
     }
 
-    .project-description{
+    .project-description {
         font-size: var(--fs-xsl);
     }
 }

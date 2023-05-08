@@ -13,19 +13,16 @@
     background-color: var(--dark-blue);
     border-radius: 0.5rem;
     color: var(--white);
+    height: max-content;
     margin: 2rem 0;
     max-width: 35rem;
-    padding: 2rem;
+    padding: 3rem 2rem;
     transition: var(--transition);
 }
 
 .about-box > p {
     font-size: var(--fs-l);
     margin: 1rem;
-}
-
-.about-box > p:last-child {
-    margin-bottom: 0;
 }
 
 .about-img {
