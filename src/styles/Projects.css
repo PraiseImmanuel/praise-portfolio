@@ -32,7 +32,7 @@
     display: flex;
     border-radius: var(--border-radius);
     filter: grayscale(100%) contrast(1) brightness(90%);
-    height: clamp(10rem, 20vw, 30rem);
+    /* height: clamp(10rem, 20vw, 30rem); */
     mix-blend-mode: lighten;
     transition: var(--transition);
 }
