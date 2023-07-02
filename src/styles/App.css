@@ -31,7 +31,7 @@
     --fw-regular: 400;
     --fw-light: 300;
     /* Font Family */
-    --ff-body: "Montserrat", Helvetica;
+    --ff-body: "Raleway", Helvetica;
     --ff-heading: "Space Grotesk", Helvetica;
     /* Transition */
     --transition: all 0.4s cubic-bezier(0.65, 0.05, 0.38, 0.94);
@@ -73,7 +73,7 @@ body {
     font-family: var(--ff-body);
     font-size: var(--fs-md);
     font-weight: var(--fw-regular);
-    overflow: overlay;
+    overflow-x: hidden;
     width: 100%;
 }
 
@@ -92,6 +92,23 @@ a {
 
 .padded-container {
     min-height: calc(100vh + 5rem);
+}
+
+.strokes {
+    position: relative;
+    margin-bottom: 8rem;
+}
+
+.strokes::after {
+    background-color: rgba(0, 0, 0, 0.214);
+    bottom: -4rem;
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: absolute;
+    width: 100%;
 }
 
 .h2-heading {
@@ -224,10 +241,6 @@ a {
 }
 
 @media screen and (max-width: 768px) {
-    .padded-container {
-        padding: 7rem 0 0;
-    }
-
     .h2-heading h2 {
         font-size: var(--fs-ll);
     }

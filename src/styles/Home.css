@@ -53,20 +53,24 @@
     background-color: var(--light-blue);
     display: flex;
     justify-content: center;
-    height: clamp(14rem, 28vw, 18rem);
+    height: 55vw;
     position: relative;
-    width: clamp(14rem, 28vw, 18rem);
+    width: 55vw;
+    max-height: 18rem;
+    max-width: 18rem;
     overflow: hidden;
     z-index: 1;
 }
 
 .image-box-stroke {
     border: 0.25rem solid var(--grayish-pink);
-    height: clamp(14rem, 28vw, 18rem);
+    height: 55vw;
     position: absolute;
     top: 1.25rem;
     left: 1.25rem;
-    width: clamp(14rem, 28vw, 18rem);
+    width: 55vw;
+    max-height: 18rem;
+    max-width: 18rem;
 }
 
 .social-links {
@@ -207,8 +211,8 @@
 
     .image-box,
     .image-box-stroke {
-        height: clamp(10rem, 48vw, 16rem);
-        width: clamp(10rem, 48vw, 16rem);
+        height: 65vw;
+        width: 65vw;
     }
 
     .image-box-stroke {

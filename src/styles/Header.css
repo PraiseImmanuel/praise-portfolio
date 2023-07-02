@@ -1,7 +1,7 @@
 .header {
     background-color: var(--dark-blue);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid #ffffff10;
+    border-bottom: 1px solid #ffffff08;
     display: flex;
     height: 4.375rem;
     justify-content: space-between;
@@ -148,8 +148,8 @@
 
 @media screen and (max-width: 800px) {
     .header {
-        font-size: 1rem;
-        padding: 3rem;
+        font-size: 0.85rem;
+        padding: 2rem 2rem 1.5rem;
     }
 
     .nav-links {
@@ -168,14 +168,14 @@
 
 @media screen and (max-width: 500px) {
     .header {
-        padding: 0.25rem 0.5rem;
+        padding: 0.5rem 0.5rem 0.25rem;
         height: max-content;
     }
 }
 
 @media screen and (max-width: 340px) {
     .nav-link {
-        padding: 0.5rem;
+        padding: 0.85rem 1.25rem 0.5rem;
     }
 }
 

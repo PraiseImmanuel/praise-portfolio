@@ -9,14 +9,23 @@
     justify-content: space-between;
 }
 
-.about-box {
-    background-color: var(--dark-blue);
-    border-radius: 0.5rem;
-    color: var(--white);
-    height: max-content;
+.about-box-border {
+    background-image: url("/image/bg-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.8rem;
     margin: 2rem 0;
-    max-width: 35rem;
-    padding: 3rem 2rem;
+    padding: 0.5rem;
+}
+
+.about-box {
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    color: var(--dark-blue);
+    height: max-content;
+    line-height: 1.5;
+    max-width: 37rem;
+    padding: 2.5rem 2rem;
     transition: var(--transition);
 }
 

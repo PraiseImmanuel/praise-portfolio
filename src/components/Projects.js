@@ -81,40 +81,42 @@ const Projects = () => {
     return (
         <section id="projects">
             <div className="margin-container padded-container">
-                <div className="h2-heading">
-                    <div className="heading-and-image">
-                        <h2>Recent Projects</h2>
+                <div className="strokes">
+                    <div className="h2-heading">
+                        <div className="heading-and-image">
+                            <h2>Recent Projects</h2>
+                        </div>
                     </div>
-                </div>
-                <div className="project-container">
-                    {renderProject(
-                        "https://advice-website.netlify.app",
-                        "/image/project1.jpg",
-                        "Project one",
-                        "/image/one-stroke.png",
-                        "Advice Generator App",
-                        `
+                    <div className="project-container">
+                        {renderProject(
+                            "https://advice-website.netlify.app",
+                            "/image/project1.jpg",
+                            "Project one",
+                            "/image/one-stroke.png",
+                            "Advice Generator App",
+                            `
                         A web application that generates
                         random advice with nicely 
                         crafted interactivity.
                         `,
-                        "https://github.com/PraiseImmanuel/advice-web-app"
-                    )}
-                </div>
+                            "https://github.com/PraiseImmanuel/advice-web-app"
+                        )}
+                    </div>
 
-                <div className="project-container">
-                    {renderProject(
-                        "https://praiseimmanuel.github.io/ecommerce-product/",
-                        "/image/project2.jpg",
-                        "Project two",
-                        "/image/two-stroke.png",
-                        "E-commerce website",
-                        `
+                    <div className="project-container">
+                        {renderProject(
+                            "https://praiseimmanuel.github.io/ecommerce-product/",
+                            "/image/project2.jpg",
+                            "Project two",
+                            "/image/two-stroke.png",
+                            "E-commerce website",
+                            `
                         A functional website showcasing 
                         products for sale developed with vanila javascript.
                         `,
-                        "https://github.com/PraiseImmanuel/ecommerce-product"
-                    )}
+                            "https://github.com/PraiseImmanuel/ecommerce-product"
+                        )}
+                    </div>
                 </div>
             </div>
         </section>
