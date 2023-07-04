@@ -62,6 +62,10 @@
     z-index: 1;
 }
 
+.image-box > img {
+    object-fit: cover;
+}
+
 .image-box-stroke {
     border: 0.25rem solid var(--grayish-pink);
     height: 55vw;
