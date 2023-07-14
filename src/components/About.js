@@ -15,21 +15,6 @@ const About = () => {
                         <div className="about-box-border">
                             <div className="about-box">
                                 <p>
-                                    Hello there! I’m Praise and let me tell you,
-                                    I'm all about snacks, whether it's fried,
-                                    boiled, smoked, or raw; ‘Bros Otilor’
-                                    <span
-                                        role="img"
-                                        className="wave"
-                                        aria-label="wave"
-                                    >
-                                        😄
-                                    </span>
-                                    . My strongest hobby is adding color and
-                                    creativity to the world, pixel after pixel.
-                                </p>
-
-                                <p>
                                     With a solid understanding of HTML, CSS, and
                                     JavaScript, I am always excited to dive into
                                     React and leverage its power to bring the
