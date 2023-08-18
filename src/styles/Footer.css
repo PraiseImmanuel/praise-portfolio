@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     letter-spacing: 0.05rem;
-    padding: 2rem 0 3rem;
+    padding: 1.5rem 0 2rem;
 }
 
 .footer-links {
@@ -55,6 +55,6 @@
 
 @media screen and (max-width: 330px) {
     .footer-container {
-        padding: 2rem 0;
+        padding: 1.5rem 0;
     }
 }

@@ -7,7 +7,7 @@
     height: 100vh;
     position: fixed;
     top: 0;
-    transition: all 1s cubic-bezier(0.25, 0.74, 0.64, 0.55);
+    transition: background-color 1s cubic-bezier(0.25, 0.74, 0.64, 0.55);
     z-index: 11111;
     width: 100vw;
     animation: change-color 1s ease-in forwards 5s;
@@ -157,8 +157,8 @@ svg {
 .welcome {
     color: #e6f7f6;
     font-size: 1.1rem;
-    font-family: "Raleway", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
+    font-family: "Space Grotesk", Helvetica, sans-serif;
+    font-weight: 400;
     display: block;
     position: absolute;
     top: 50%;

@@ -73,7 +73,7 @@ const Contact = () => {
 
     return (
         <section id="contact">
-            <div className="contact-container margin-container padded-container">
+            <div className="contact-container margin-container">
                 <div className="h2-heading">
                     <div className="heading-and-image">
                         <h2>Contact Me</h2>

@@ -1,3 +1,10 @@
+.projects {
+    column-gap: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .project-container {
     display: flex;
     justify-content: center;
@@ -73,7 +80,7 @@
     margin-top: 1rem;
     padding: 2rem;
     text-align: center;
-    font-size: var(--fs-md);
+    font-size: 1rem;
 }
 
 .project-description p {

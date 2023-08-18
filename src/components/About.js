@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
     return (
         <section id="about">
-            <div className="about-container margin-container padded-container">
+            <div className="about-container margin-container">
                 <div className="strokes">
                     <div className="h2-heading">
                         <div className="heading-and-image">
@@ -15,25 +15,24 @@ const About = () => {
                         <div className="about-box-border">
                             <div className="about-box">
                                 <p>
-                                    With a solid understanding of HTML, CSS, and
-                                    JavaScript, I am always excited to dive into
-                                    React and leverage its power to bring the
-                                    wireframe of the UI/UX designer to life with
-                                    any necessary technology or library like
-                                    Framer Motion, Tailwind CSS, and Redux
-                                    toolkit among others; as well as integrating
-                                    APIs and collaborating cohesively with the
-                                    backend team.
+                                    I'm Praise Immanuel, a front-end developer
+                                    based in Nigeria. With a knack for crafting
+                                    clean designs and seamless user experiences,
+                                    I specialize in bringing digital ideas to
+                                    life.
                                 </p>
 
                                 <p>
-                                    I have a keen eye for detail and also have a
-                                    rich experience in Graphic Design. I am
-                                    eager to collaborate with experienced
-                                    professionals and actively contribute to the
-                                    success of innovative projects. I am
-                                    currently open to entry roles and Internship
-                                    opportunities.
+                                    Creating user-interfaces and making them
+                                    responsive across devices is my expertise. I
+                                    thrive in collaborative environments,
+                                    working closely with designers and
+                                    developers to create great projects.
+                                </p>
+
+                                <p>
+                                    I am currently open to entry roles and
+                                    internship opportunities.
                                 </p>
                             </div>
                         </div>

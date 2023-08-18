@@ -27,6 +27,11 @@ const Header = () => {
         };
     }, []);
 
+    const goToHome = () => {
+        setDisplayUl(false);
+        scroll.scrollToTop();
+    };
+
     return (
         <header className="header">
             <nav className="nav">
@@ -47,7 +52,7 @@ const Header = () => {
                             <Link
                                 activeClass="active"
                                 to="home"
-                                onClick={() => scroll.scrollToTop()}
+                                onClick={goToHome}
                             >
                                 <span className="displayed">Home</span>
                                 <span className="displayed-on-hover">Home</span>
@@ -62,6 +67,7 @@ const Header = () => {
                                 smooth={true}
                                 offset={50}
                                 duration={500}
+                                onClick={() => setDisplayUl(false)}
                             >
                                 <span className="displayed">About</span>
                                 <span className="displayed-on-hover">
@@ -78,6 +84,7 @@ const Header = () => {
                                 smooth={true}
                                 offset={50}
                                 duration={500}
+                                onClick={() => setDisplayUl(false)}
                             >
                                 <span className="displayed">Projects</span>
                                 <span className="displayed-on-hover">
@@ -94,6 +101,7 @@ const Header = () => {
                                 smooth={true}
                                 offset={50}
                                 duration={500}
+                                onClick={() => setDisplayUl(false)}
                             >
                                 <span className="displayed">Contact</span>
                                 <span className="displayed-on-hover">

@@ -164,6 +164,13 @@
         display: flex;
         justify-content: center;
     }
+
+    .nav-link.five,
+    .nav-link.four,
+    .nav-link.three,
+    .nav-link.two {
+        animation: none;
+    }
 }
 
 @media screen and (max-width: 500px) {

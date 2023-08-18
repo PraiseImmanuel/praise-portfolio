@@ -4,6 +4,10 @@
     justify-content: center;
 }
 
+.about-container .h2-heading {
+    margin-top: 3rem;
+}
+
 .about-box-and-image {
     display: flex;
     justify-content: space-between;
@@ -13,15 +17,15 @@
     background-image: url("/image/bg-2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 0.8rem;
+    border-radius: 0.5rem;
     margin: 2rem 0;
-    padding: 0.5rem;
+    padding: 0.4rem;
 }
 
 .about-box {
     background-color: var(--white);
-    border-radius: 0.5rem;
-    color: var(--dark-blue);
+    border-radius: 0.25rem;
+    color: var(--dark-blue-text);
     height: max-content;
     line-height: 1.5;
     max-width: 37rem;
@@ -31,6 +35,7 @@
 
 .about-box > p {
     font-size: var(--fs-l);
+    font-weight: 500;
     margin: 1rem;
 }
 

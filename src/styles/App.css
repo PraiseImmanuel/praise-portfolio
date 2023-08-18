@@ -4,6 +4,7 @@
 :root {
     /* Primary color */
     --dark-blue: #21304a;
+    --dark-blue-text: #2a3c5c;
     --dark-blue-transperent: #21304ac4;
     --light-blue: #46dbd1;
     --light-blue-scroll: #96ddd8;
@@ -90,13 +91,9 @@ a {
     max-width: 1200px;
 }
 
-.padded-container {
-    min-height: calc(100vh + 5rem);
-}
-
 .strokes {
     position: relative;
-    margin-bottom: 8rem;
+    margin-bottom: 5rem;
 }
 
 .strokes::after {

@@ -80,42 +80,77 @@ const renderProject = (
 const Projects = () => {
     return (
         <section id="projects">
-            <div className="margin-container padded-container">
+            <div className="margin-container">
                 <div className="strokes">
                     <div className="h2-heading">
                         <div className="heading-and-image">
                             <h2>Recent Projects</h2>
                         </div>
                     </div>
-                    <div className="project-container">
-                        {renderProject(
-                            "https://advice-website.netlify.app",
-                            "/image/project1.jpg",
-                            "Project one",
-                            "/image/one-stroke.png",
-                            "Advice Generator App",
-                            `
+
+                    <div className="projects">
+                        <div className="project-container">
+                            {renderProject(
+                                "https://electronic-gadgets.netlify.app",
+                                "/image/electronic-gadgets-netlify-app.jpg",
+                                "Project one",
+                                "/image/one-stroke.png",
+                                "E-gadgets Store",
+                                `
+                        An e-commerce store showcasing electronic gadgets
+                         for sale, developed with React.js + Typescript.
+                        `,
+                                "https://github.com/PraiseImmanuel/e-gadget"
+                            )}
+                        </div>
+
+                        <div className="project-container">
+                            {renderProject(
+                                "https://advice-website.netlify.app",
+                                "/image/project1.jpg",
+                                "Project one",
+                                "/image/one-stroke.png",
+                                "Advice Generator App",
+                                `
                         A web application that generates
                         random advice with nicely 
                         crafted interactivity.
                         `,
-                            "https://github.com/PraiseImmanuel/advice-web-app"
-                        )}
-                    </div>
+                                "https://github.com/PraiseImmanuel/advice-web-app"
+                            )}
+                        </div>
 
-                    <div className="project-container">
-                        {renderProject(
-                            "https://praiseimmanuel.github.io/ecommerce-product/",
-                            "/image/project2.jpg",
-                            "Project two",
-                            "/image/two-stroke.png",
-                            "E-commerce website",
-                            `
-                        A functional website showcasing 
+                        <div className="projects">
+                            <div className="project-container">
+                                {renderProject(
+                                    "https://metabnb-praise.netlify.app/",
+                                    "/image/metabnb-praise-netlify-app.jpg",
+                                    "Project two",
+                                    "/image/one-stroke.png",
+                                    "Metabnb",
+                                    `
+                                    Metabnb offers living spaces within the metaverse
+                                    to users, interested in exploring virtual worlds.
+                        `,
+                                    "https://github.com/PraiseImmanuel/metabnb"
+                                )}
+                            </div>
+
+                            <div className="project-container">
+                                {renderProject(
+                                    "https://praiseimmanuel.github.io/ecommerce-product/",
+                                    "/image/project2.jpg",
+                                    "Project two",
+                                    "/image/two-stroke.png",
+                                    "E-commerce website",
+                                    `
+                        A website showcasing 
                         products for sale developed with vanila javascript.
                         `,
-                            "https://github.com/PraiseImmanuel/ecommerce-product"
-                        )}
+                                    "https://github.com/PraiseImmanuel/ecommerce-product"
+                                )}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
